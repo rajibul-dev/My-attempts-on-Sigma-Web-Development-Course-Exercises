@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black-general: #222;
+  --white-general: #fff;
+  --white-secondary: #ccc;
+  --general-roundness: 8px;
+}
+
+html {
+  font-size: 62.5%; /* For making 1rem = 10px */
+}
+
+body {
+  background-color: var(--black-general);
+  color: var(--white-general);
+  padding: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 80rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.video-li {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.thumbnail-container {
+  flex-shrink: 0;
+  position: relative;
+  border-radius: var(--general-roundness);
+  overflow: hidden;
+  height: auto;
+  width: auto;
+}
+
+.thumbnail {
+  height: 100%;
+  max-width: 40rem;
+}
+
+.duration {
+  position: absolute;
+  top: 78%;
+  left: 75%;
+
+  background-color: var(--black-general);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+
+  line-height: 1.15;
+}
+
+.details-container {
+  padding: 1rem 0.4rem;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.details {
+  color: var(--white-secondary);
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  row-gap: 0;
+}
+
+span {
+  display: inline-block;
+}
